@@ -3,41 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UrlShortener</title>
-
-    <link rel="stylesheet" href="./index.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/index.css" />
   </head>
-
   <body>
-    <!-- navbar -->
-    <div class="topnav">
-      <a href="#">UrlShortner</a>
-
-      <a href="#">Home</a>
-    </div>
-    <!--  -->
-    <h1>Welcome To Url Shortner Application</h1>
-    <div id="container">
-      <div>
-        <form id="form">
+    <!-- SignUp login div -->
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+      <div class="signup">
+        <form id="signUp_form">
+          <label for="chk" aria-hidden="true">Sign up</label>
           <input
             type="text"
-            id="UrlInput"
-            placeholder="Enter Url Here..."
+            name="txt"
+            id="s-name"
+            placeholder="User name"
             required
           />
-          <input type="Submit" />
+          <input
+            type="email"
+            name="email"
+            id="s-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="Password"
+            name="pswd"
+            id="s-pass"
+            placeholder="Password"
+            required
+          />
+          <input type="submit" id="s-submit" value="Sign up" />
         </form>
       </div>
-      <div id="output_url">
-        <h1>Shortend Url 📝</h1>
-        <div id="Short">
-          <h3 id="shortenUrl"></h3>
-          <button onclick="copyToClipboard()" id="copybtn">Copy</button>
-        </div>
+      <div class="login">
+        <form id="login_form">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input
+            type="email"
+            name="email"
+            id="l-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="Password"
+            name="pswd"
+            id="l-pass"
+            placeholder="Password"
+            required
+          />
+          <input type="submit" id="l-submit" value="Login" />
+        </form>
       </div>
     </div>
   </body>
 </html>
 
-<script src="./index.js"></script>
+<script src="./script/index.js"></script>

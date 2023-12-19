@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UrlShortener</title>
+
+    <link rel="stylesheet" href="./style/url.css" />
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <div class="topnav">
+      <a href="#">UrlShortner</a>
+
+      <a id="User" href="#">User</a>
+    </div>
+    <!--  -->
+    <h1>Welcome To Url Shortner Application</h1>
+    <div id="container">
+      <div>
+        <form id="form">
+          <input
+            type="text"
+            id="UrlInput"
+            placeholder="Enter Url Here..."
+            required
+          />
+          <input type="Submit" />
+        </form>
+      </div>
+      <div id="output_url">
+        <h1>Shortend Url 📝</h1>
+        <div id="Short">
+          <h3 id="shortenUrl"></h3>
+          <button onclick="copyToClipboard()" id="copybtn">Copy</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./script/url.js"></script>
