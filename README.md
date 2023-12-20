@@ -1,6 +1,6 @@
 # URLshortener
 
-## Frontend Deployed Link: https://65826f077549a72997dab16f--flourishing-taiyaki-88b8d4.netlify.app/
+## Frontend Deployed Link: https://6582755a6f1cd62e10d191de--timely-tarsier-a345a3.netlify.app/
 
 ## Backend Deployed Link: https://urlshortener-rtw2.onrender.com/
 
