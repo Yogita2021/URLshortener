@@ -32,17 +32,77 @@ Welcome to the URL Shortener web application! This project is designed to simpli
 1. Click the "Submit" button to generate a short URL.
 1. Copy and share the shortened URL with others.
 
+## Backend Documentation:
+
+### Prerequisites
+
+- Node.js
+- MongoDB
+- mongoose
+
 ## Installation
 
 To run this project locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/Yogita2021/URLshortener`
-
-   # For Backend
-
 2. Backend: `cd Backend`
 3. Install dependencies: `npm install`
-4. Start the development server: `npm run start`
+4. Configure environment variables. `port : 3000, mongoUrl, secreteKey`
+5. Start the development server: `npm run start`
+
+## Usage
+
+### Shortening a Url
+
+To shorten a URL, make a POST request to `https://urlshortener-rtw2.onrender.com/url/shorten` with the original URL in req.body.
+
+### Accessing original Url
+
+To accessing original url GET request to `https://urlshortener-rtw2.onrender.com/url/:shortId`.
+
+### User Registration and Login
+
+To create new user account ,make a POST request to `https://urlshortener-rtw2.onrender.com/user/register` with name,email,password
+
+If user is already registered then, make a POST request to `https://urlshortener-rtw2.onrender.com/user/login` with email,password.
+
+### Security
+
+- Basic authentication functionality (name,email,password)
+- Authentication based on Tokens which is generated using jsonwebtoken.
+
+## API Documentation
+
+### Endpoint: `/user/register`
+
+- Method: POST
+- Parameters:
+  - `name` (string): User's name.
+  - `email` (string): User's email.
+  - `password` (string): User's password.
+
+### Endpoint: `/user/login`
+
+- Method: POST
+- Parameters:
+  - `email` (string): User's email.
+  - `password` (string): User's password.
+
+### Endpoint: `/url/shorten`
+
+- Method: POST
+- Parameters:
+  - `originalUrl`: The URL to be shortened in `req.body object`.
+- Response:
+  - `original` (string): Original URL.
+  - `shorten` (string): Shortened URL.
+
+### Endpoint: `url/:shortId`
+
+- Method: GET
+- Parameters:
+  - `shortId` (string): The short URL generated in `req.params`.
+  - It will redirect to the original URL.
 
 ## Contact
 
