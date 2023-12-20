@@ -66,11 +66,11 @@ loginForm.addEventListener("submit", (event) => {
       localStorage.setItem("userInfo", JSON.stringify(user));
 
       if (data.isError == false) {
-        alert("login successful");
+        alert(data.msg);
 
         window.location.href = "./url.html";
       } else {
-        alert("Wrong Credintials");
+        alert(data.msg);
       }
     })
     .catch((err) => console.log(err));

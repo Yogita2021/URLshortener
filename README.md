@@ -1,7 +1,8 @@
 # URLshortener
 
-#Frontend Deployed Link: https://65826f077549a72997dab16f--flourishing-taiyaki-88b8d4.netlify.app/
-#Backend Deployed Link: https://urlshortener-rtw2.onrender.com/
+## Frontend Deployed Link: https://65826f077549a72997dab16f--flourishing-taiyaki-88b8d4.netlify.app/
+
+## Backend Deployed Link: https://urlshortener-rtw2.onrender.com/
 
 Welcome to the URL Shortener web application! This project is designed to simplify the process of shortening long URLs, making them more manageable and shareable. Whether you need to share links on social media, in emails, or anywhere else, our tool streamlines the process.
 

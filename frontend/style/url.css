@@ -63,6 +63,10 @@ input:nth-child(2):hover {
   background-color: #04aa6d;
   cursor: pointer;
 }
+input:nth-child(2) {
+  background-color: #127bd6;
+  color: white;
+}
 #output_url {
   margin-top: 10%;
 }
@@ -137,4 +141,7 @@ h1 {
   margin: auto;
   margin-top: 8%;
   border-radius: 10px;
+}
+#copybtn:hover {
+  background-color: #075b3c;
 }
