@@ -97,7 +97,7 @@ If user is already registered then, make a POST request to `https://urlshortener
   - `original` (string): Original URL.
   - `shorten` (string): Shortened URL.
 
-### Endpoint: `url/:shortId`
+### Endpoint: `/url/:shortId`
 
 - Method: GET
 - Parameters:
