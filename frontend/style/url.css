@@ -27,10 +27,24 @@ body {
 .topnav a:nth-child(2) {
   margin-left: 60%;
 }
+.topnav a:nth-child(3) {
+  margin-left: 0%;
 
-.topnav a:hover {
-  background-color: #04aa6d;
-  color: black;
+  color: white;
+}
+button {
+  padding: 15%;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  font-size: medium;
+  margin-top: 0;
+  border: none;
+}
+button:hover {
+  background-color: red;
+  color: white;
 }
 
 .topnav a.active {
@@ -121,6 +135,6 @@ h1 {
   background-color: white;
   width: 40%;
   margin: auto;
-  margin-top: 12%;
+  margin-top: 8%;
   border-radius: 10px;
 }

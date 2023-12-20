@@ -1,7 +1,9 @@
+// url Module -Schema
 const mongoose = require("mongoose");
 
 const ShortUrlSchema = new mongoose.Schema({
   originalUrl: { type: String, required: true },
+
   ShortenUrl: { type: String, required: true, unique: true },
 });
 

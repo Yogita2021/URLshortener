@@ -1,3 +1,5 @@
+// auth middleware
+
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
@@ -12,8 +14,10 @@ const auth = (req, res, next) => {
     if (!decode) {
       return res.status(404).json({ msg: "Unauthorized" });
     }
-    console.log(decode);
+    // console.log(decode);
+
     req.user = decode.userId;
+
     next();
   } catch (error) {
     res.status(500).json({ msg: error.message });

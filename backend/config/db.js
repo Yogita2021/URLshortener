@@ -1,3 +1,5 @@
+//connection to MongoDbatlas
+
 const mongoose = require("mongoose");
 
 require("dotenv").config();

@@ -4,12 +4,16 @@ if (token) {
   const formEl = document.getElementById("form");
   let inputEl = document.getElementById("UrlInput");
   const shortenUrl = document.getElementById("shortenUrl");
+
   formEl.addEventListener("submit", (e) => {
     e.preventDefault();
+
     let obj = {
       originalUrl: inputEl.value,
     };
-    console.log(obj);
+
+    // console.log(obj);
+
     fetch("https://urlshortener-rtw2.onrender.com/url/shorten", {
       method: "POST",
       headers: {
@@ -36,26 +40,21 @@ if (token) {
       });
   });
 
-  // copy functionality
+  // copy Button functionality
   function copyToClipboard() {
     const copyText = document.getElementById("shortenUrl");
 
-    // Create a temporary input element
     const tempInput = document.createElement("input");
     tempInput.value = copyText.innerText;
     document.body.appendChild(tempInput);
 
-    // Select the text in the temporary input
     tempInput.select();
     tempInput.setSelectionRange(0, 99999);
 
-    // Copy the text to the clipboard
     document.execCommand("copy");
 
-    // Remove the temporary input element
     document.body.removeChild(tempInput);
 
-    // Optionally, provide feedback to the user
     alert("Text copied to clipboard: " + copyText.innerText);
   }
 
@@ -72,13 +71,21 @@ if (token) {
   }
 } else {
   alert("you are not authorized person");
+  window.location.href = "./index.html";
 }
 
 // For user Information
-
 let User = document.getElementById("User");
 
-let userInfo = JSON.parse(localStorage.getItem("userInfo")) || {};
+let userInfo = JSON.parse(localStorage.getItem("userInfo"));
+console.log(userInfo);
 if (userInfo) {
   User.innerText = userInfo.name;
+} else {
+  User.innerText = "User";
 }
+let btn = document.getElementById("LogoutBtn");
+btn.addEventListener("click", () => {
+  localStorage.removeItem("userInfo");
+  window.location.href = "./index.html";
+});

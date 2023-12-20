@@ -1,18 +1,22 @@
-let s_nameEl = document.getElementById("s-name");
-let s_emailEl = document.getElementById("s-email");
-let s_passEl = document.getElementById("s-pass");
+let nameEl = document.getElementById("s-name");
+let emailEl = document.getElementById("s-email");
+let passEl = document.getElementById("s-pass");
 const signInform = document.getElementById("signUp_form");
 
+// for submitting register form
 signInform.addEventListener("submit", (event) => {
   event.preventDefault();
+
   const obj = {
-    name: s_nameEl.value,
-    email: s_emailEl.value,
-    password: s_passEl.value,
+    name: nameEl.value,
+    email: emailEl.value,
+    password: passEl.value,
   };
+
   // console.log(obj);
   fetch("https://urlshortener-rtw2.onrender.com/user/register", {
     method: "POST",
+
     headers: {
       "Content-type": "application/json",
     },
@@ -26,21 +30,22 @@ signInform.addEventListener("submit", (event) => {
     })
     .catch((err) => console.log(err));
 });
-
+// function for form referesh
 function SrefreshForm() {
   signInform.reset();
 }
 
-let l_emailEl = document.getElementById("l-email");
-let l_passEl = document.getElementById("l-pass");
+// feching login Data
+let LemailEl = document.getElementById("l-email");
+let LpassEl = document.getElementById("l-pass");
 
 let loginForm = document.getElementById("login_form");
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const obj = {
-    email: l_emailEl.value,
-    password: l_passEl.value,
+    email: LemailEl.value,
+    password: LpassEl.value,
   };
   // console.log(obj)
   fetch("https://urlshortener-rtw2.onrender.com/user/login", {
@@ -52,12 +57,17 @@ loginForm.addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
+
       localStorage.setItem("token", data.token);
+
       let user = data.user;
+
       localStorage.setItem("userInfo", JSON.stringify(user));
+
       if (data.isError == false) {
         alert("login successful");
+
         window.location.href = "./url.html";
       } else {
         alert("Wrong Credintials");
